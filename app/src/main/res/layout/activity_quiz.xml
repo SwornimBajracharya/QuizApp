@@ -1,47 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".QuizActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Question 1" />
-
-    <RadioGroup
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <RadioButton
+        <TextView
+            style="@style/questionStyle"
+            android:text="1. You're 3rd place right now in a race. What place are you in when you pass the person in 2nd place? " />
+
+        <RadioGroup
+            android:id="@+id/num_one_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1st"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/ans1st"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2nd"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3rd"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/arrogant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I dont care, I am a winner either way xD"
+                android:textSize="16sp" />
+
+        </RadioGroup>
+
+
+        <!-- Question 2 -->
+        <TextView
+            style="@style/questionStyle"
+            android:text="2. How many months have 28 days? " />
+
+        <RadioGroup
+            android:id="@+id/num_two_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="None"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/ans2nd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All of them"
+                android:textSize="16sp" />
+
+        </RadioGroup>
+
+        <!-- Question 3 -->
+
+        <TextView
+            style="@style/questionStyle"
+            android:text="3. The answer is really big." />
+
+        <EditText
+            android:id="@+id/edit_text"
+            style="@style/questionStyle"
+            android:hint="Please enter your answer"
+            android:inputType="text" />
+
+        <!-- Question 4 -->
+
+        <TextView
+            style="@style/questionStyle"
+            android:text="4. What smells like red paint but is blue?" />
+
+        <CheckBox
+            android:id="@+id/blue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Option 1" />
+            android:text="Blue"
+            android:textSize="16sp" />
 
-        <RadioButton
+        <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Option 2" />
+            android:text="Red"
+            android:textSize="16sp" />
 
-        <RadioButton
+        <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Option 3" />
+            android:text="Yellow"
+            android:textSize="16sp" />
 
-        <RadioButton
+        <CheckBox
+            android:id="@+id/paint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Option 4" />
-    </RadioGroup>
+            android:layout_marginBottom="16sp"
+            android:text="Paint"
+            android:textSize="16sp" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Submit"
-        android:id="@+id/submitBtn"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5. If a leaf falls to the ground in a forest and no one hears it, does it make a sound?  "
+            android:textAppearance="?android:textAppearanceMedium" />
 
-</LinearLayout>
+        <!-- Question 5 -->
 
+        <RadioGroup
+            android:id="@+id/num_five_radio_group"
+            style="@style/questionStyle">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/deaf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How insensitive of you, I am deaf"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/ans5th"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Depends on where it lands"
+                android:textSize="16sp" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit" />
+
+    </LinearLayout>
+
+</ScrollView>
