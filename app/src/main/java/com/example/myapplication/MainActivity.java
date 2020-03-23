@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         startQuizButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
-                Intent intent = new Intent(MainActivity.this, QuizActivity.class);
+                Intent intent = QuizActivity.makeIntent(MainActivity.this);
                 startActivity(intent);
             }
         });

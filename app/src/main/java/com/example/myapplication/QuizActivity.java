@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +24,10 @@ public class QuizActivity extends AppCompatActivity {
     private CheckBox blue;
     private CheckBox paint;
 
+    public static Intent makeIntent(Context context){
+        Intent intent = new Intent (context, QuizActivity.class);
+        return intent;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,15 +78,10 @@ public class QuizActivity extends AppCompatActivity {
                     score += 1;
                 }
 
-                Intent intent = new Intent(QuizActivity.this, ScoreActivity.class);
-                intent.putExtra("SCORE", score+"/5");
+                Intent intent = ScoreActivity.makeIntent(QuizActivity.this, score+"/5");
                 startActivity(intent);
                 }
             }
         );
-
-
-
-
     }
 }
