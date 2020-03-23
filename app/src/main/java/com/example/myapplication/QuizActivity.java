@@ -24,6 +24,7 @@ public class QuizActivity extends AppCompatActivity {
     private CheckBox blue;
     private CheckBox paint;
 
+    //decoupling
     public static Intent makeIntent(Context context){
         Intent intent = new Intent (context, QuizActivity.class);
         return intent;
